@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: seq-balancer
+spec:
+  selector:
+    app: seq
+  ports:
+    - name: seq-port
+      protocol: TCP
+      port: 5341
+      targetPort: 80
+  type: LoadBalancer
