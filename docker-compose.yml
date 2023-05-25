@@ -1,0 +1,21 @@
+services:
+  service:
+    build: ./
+    container_name: service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=k8s
+    ports:
+      - 5000:80
+    depends_on:
+      - sql-server
+  sql-server:
+    image: mcr.microsoft.com/mssql/server
+    container_name: sql-server-service
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=1tsJusT@S@mpleP@ssword!
+    volumes:
+      - sql-server-data:/var/opt/mssql
+
+volumes:
+  sql-server-data:
