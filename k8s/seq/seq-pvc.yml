@@ -2,6 +2,7 @@
 kind: PersistentVolumeClaim
 metadata:
   name: seq-pvc
+  namespace: k8s-test
 spec:
   accessModes:
     - ReadWriteOnce

@@ -2,6 +2,7 @@
 kind: Deployment
 metadata:
   name: seq-deployment
+  namespace: k8s-test
 spec:
   replicas: 1
   selector:

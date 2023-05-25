@@ -2,6 +2,7 @@
 kind: Deployment
 metadata:
   name: sql-server-deployment
+  namespace: k8s-test
 spec:
   replicas: 1
   selector:

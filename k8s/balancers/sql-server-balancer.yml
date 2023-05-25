@@ -2,6 +2,7 @@
 kind: Service
 metadata:
   name: sql-server-balancer
+  namespace: k8s-test
 spec:
   selector:
     app: sql-server
