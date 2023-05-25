@@ -12,4 +12,5 @@ public class ParametersProvider
     }
 
     public string Seq => _config.GetRequiredValue<string>("SeqUrl");
+    public string SqlServer => _config.GetSqlServerConnectionString("SqlServer");
 }

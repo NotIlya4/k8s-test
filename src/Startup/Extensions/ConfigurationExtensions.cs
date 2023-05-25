@@ -13,4 +13,9 @@ public static class ConfigurationExtensions
 
         return value ?? throw new InvalidOperationException("There are no such parameter in configuration");
     }
+
+    public static string GetRequiredValue(this IConfiguration config, string? key = null)
+    {
+        return config.GetRequiredValue<string>(key);
+    }
 }
