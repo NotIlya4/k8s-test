@@ -1,0 +1,14 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: service-service
+  namespace: k8s-test
+spec:
+  selector:
+    app: service
+  ports:
+    - name: service-port
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
